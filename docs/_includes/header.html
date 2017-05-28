@@ -1,30 +1,11 @@
 <nav class="nav">
+  <a class="nav-brand" href="{{ site.url }}">
+    <img src="{{ site.url }}/images/bulma-logo.png" alt="{{ site.title }}" height="28" width="112">
+  </a>
+  <a class="nav-brand" href="{{ site.url }}">
+    Bulma
+  </a>
   <div class="nav-left">
-    <a class="nav-item is-brand" href="{{ site.url }}">
-      <img src="{{ site.url }}/images/bulma-logo.png" alt="{{ site.title }}">
-    </a>
-  </div>
-
-  <div class="nav-center">
-    <a class="nav-item" href="{{ site.github }}">
-      <span class="icon">
-        <i class="fa fa-github"></i>
-      </span>
-    </a>
-    <a class="nav-item" href="https://twitter.com/jgthms">
-      <span class="icon">
-        <i class="fa fa-twitter"></i>
-      </span>
-    </a>
-  </div>
-
-  <span id="nav-toggle" class="nav-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </span>
-
-  <div id="nav-menu" class="nav-right nav-menu">
     <a class="nav-item {% if page.route == 'index' %}is-active{% endif %}" href="{{ site.url }}/">
       Home
     </a>
@@ -38,31 +19,40 @@
     <a class="nav-item {% if page.route == 'blog' %}is-active{% endif %}" href="{{ site.url }}/blog/">
       Blog
     </a>
+    <a class="nav-item" href="{{ site.github }}">
+      <span class="icon" style="margin-right: 0.25rem;">
+        <i class="fa fa-github"></i>
+      </span>
+      <span>
+        Github
+      </span>
+    </a>
+    <a class="nav-item is-hidden-touch is-hidden-desktop-only" href="https://twitter.com/jgthms">
+      <span class="icon" style="margin-right: 0.25rem;">
+        <i class="fa fa-twitter"></i>
+      </span>
+      @jgthms
+    </a>
+  </div>
 
-    <div class="nav-item">
-      <div class="field is-grouped">
-        <p class="control">
-          <a id="twitter"
-            class="button"
-            data-social-network="Twitter"
-            data-social-action="tweet"
-            data-social-target="{{ site.url }}"
-            target="_blank"
-            href="https://twitter.com/intent/tweet?text={{ site.title | urlencode }}&url={{ site.url }}&via=jgthms">
-            <span class="icon">
-              <i class="fa fa-twitter"></i>
-            </span>
-            <span>Tweet</span>
-          </a>
-        </p>
-        <p class="control">
-          <a class="button is-primary" href="{{ site.download }}">
-            <span class="icon">
-              <i class="fa fa-download"></i>
-            </span>
-            <span>Download</span>
-          </a>
-        </p>
+  <span id="nav-toggle" class="nav-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+
+  <div id="nav-menu" class="nav-right nav-menu">
+    <div id="nav-social" class="nav-item is-hidden-touch">
+      <div id="nav-github">
+        <iframe class="github-btn" src="https://ghbtns.com/github-btn.html?user=jgthms&repo=bulma&type=star&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+      </div>
+
+      <div id="nav-twitter">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ site.title }}" data-url="{{ site.url }}" data-count="horizontal" data-via="jgthms" data-related="jgthms:Creator of Bulma">Tweet</a>
+      </div>
+
+      <div id="nav-facebook">
+        <div class="fb-like" data-href="https://www.facebook.com/bulmaio" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
       </div>
     </div>
   </div>

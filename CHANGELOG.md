@@ -2,6 +2,7 @@
 
 ## 0.4.2
 
+* Breaking: `nav-center` has been removed as it was causing too many problems (see #732 #739 #751 #760 #764)
 * Fix #728 selected row on striped table
 * Fix #747 remove flex-shrink for is-expanded
 * Fix #702 add icons support for select dropdown
