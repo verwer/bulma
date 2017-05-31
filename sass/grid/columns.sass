@@ -3,7 +3,7 @@
   flex-basis: 0
   flex-grow: 1
   flex-shrink: 1
-  padding: 0.75rem
+  padding: $column-gap
   .columns.is-mobile > &.is-narrow
     flex: none
   .columns.is-mobile > &.is-full
@@ -204,13 +204,13 @@
         margin-left: ($i / 12) * 100%
 
 .columns
-  margin-left: -0.75rem
-  margin-right: -0.75rem
-  margin-top: -0.75rem
+  margin-left: -$column-gap
+  margin-right: -$column-gap
+  margin-top: -$column-gap
   &:last-child
-    margin-bottom: -0.75rem
+    margin-bottom: -$column-gap
   &:not(:last-child)
-    margin-bottom: 0.75rem
+    margin-bottom: $column-gap
   // Modifiers
   &.is-centered
     justify-content: center
